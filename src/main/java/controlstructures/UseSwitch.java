@@ -3,7 +3,7 @@ package controlstructures;
 public class UseSwitch {
   public static void main(String[] args) {
 
-    int monthName = 7;
+    int monthName = 2;
     switch(monthName) {
       case 1:
         System.out.println("January");
