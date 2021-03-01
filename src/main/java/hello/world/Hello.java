@@ -27,6 +27,10 @@ public class Hello {
     int value = Integer.parseInt(line);
     value = value + 10;
     out.println(value);
+
+    int ninetynine = 99;
+    short s = 99;
+//    short s = ninetynine;
   }
 }
 
