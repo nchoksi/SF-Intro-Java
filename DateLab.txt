@@ -1,0 +1,36 @@
+Date Lab:
+
+Create a Date class and another class (e.g. UseDate) that you will use to
+exercise Date and objects of Date type.
+
+In the Date class:
+- define the following methods:
+  - isLeapYear
+  - daysInMonth (month 3 -> 31, month 4 -> 30, month 2 year 2000 -> 29, month 2 year 1999 -> 28
+  (9, 4, 6, 11 -> 30
+  2 -> 28/29 depending on leap year,
+  otherwise 31)
+  - monthName
+  - dayName
+Question: do these seem to be instance methods or static methods?
+
+Write some code in the exercise class (UseDate) to verify these methods work properly
+
+Then:
+- define three instance fields in the class: day, month, and year
+(how should "changeable" -aka mutable- fields be declared stylistically?)
+- define a "constructor" that verifies if the day, month, year values proposed
+are valid, and if so initializes the fields, otherwise throws an exception
+- write some test code to verify correct rejection of bad values.
+
+Define these methods in the Date class:
+- asText
+  (verify this against the objects you created in your test of the constructor)
+- dayOfWeek
+- tomorrow
+
+Question, again, are these instance methods or static methods?
+
+Write code to exercise the new methods.
+
+
