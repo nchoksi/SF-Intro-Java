@@ -1,6 +1,15 @@
 package zeller;
 
+enum Month {
+  JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY,
+  AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER;
+}
+
 public class ZellerFunction {
+  public static int dayOfWeek(int day, Month m, int year) {
+    return dayOfWeek(day, m.ordinal() + 1, year);
+  }
+
   // NO default arguments...
   public static int dayOfWeek(int day, int month, int year) {
     if (month < 3) {
@@ -20,5 +29,7 @@ public class ZellerFunction {
     System.out.println(dayOfWeek(1, 1, 2000));
     // no named parameters
 //    dayOfWeek(month=1, day=12, year=2021);
+    System.out.println(dayOfWeek(1, Month.JANUARY, 2000));
+//    Month.JANUARY.
   }
 }
