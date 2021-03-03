@@ -1,5 +1,7 @@
 package datelab;
 
+import java.util.Objects;
+
 public class Date {
   private int day;
   private int month;
@@ -53,11 +55,13 @@ public class Date {
     return dayNames[day];
   }
 
-  public String asText(Date this) {
+//  public String asText(@NotNull Date this) {
+  public String asText() {
     return "Date: " + this.day + "/" + this.month + "/" + this.year;
   }
 
-  public int dayOfWeek(Date this) {
+//  public int dayOfWeek(Date this) {
+  public int dayOfWeek() {
     int month = this.month;
     int year = this.year;
     if (month < 3) {
@@ -67,8 +71,11 @@ public class Date {
     return (this.day + (13 * (month + 1) / 5) + year + year / 4 - year / 100 + year / 400) % 7;
   }
 
-  public void tomorrow(Date this) {
-    this.day++;
+//  public void tomorrow(Date this) {
+  public void tomorrow() {
+//    this.day++;
+    day++;
+//    if (this.day > Date.daysInMonth(this.month, this.year)) {
     if (this.day > daysInMonth(this.month, this.year)) {
       this.day = 1;
       this.month++;
@@ -79,5 +86,29 @@ public class Date {
     }
   }
   // Equality test!!!
+  // Java says "if you implement equals, you really should!!! implement hashcode
+//  public boolean equals(/*Date this, */Object other) {
+  public boolean equals(Object other) {
+//    if (other instanceof Date)
+    if (other.getClass() == Date.class) { // or " == this.getClass()"
+      Date oDate = (Date)other;
+      return oDate.day == this.day
+          && oDate.month == this.month
+          && oDate.year == this.year;
+    } else return false;
+  }
 
+  public int hashCode() {
+    return Objects.hash(day, month, year);
+  }
 }
+
+
+
+
+
+
+
+
+
+
