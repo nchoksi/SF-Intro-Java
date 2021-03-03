@@ -62,6 +62,8 @@ public class Filtering {
 //    System.out.println(filter(ld, (d) -> { return d.isAfter(yesterday); }));
     System.out.println(filter(ld, d -> d.isAfter(yesterday)));
 
-    ld.sort();
+    ld = new ArrayList<>(ld);
+    // do this with a list of String.
+//    ld.sort( .. lambda expression here .. );
   }
 }
