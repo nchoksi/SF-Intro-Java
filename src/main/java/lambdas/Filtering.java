@@ -65,5 +65,33 @@ public class Filtering {
     ld = new ArrayList<>(ld);
     // do this with a list of String.
 //    ld.sort( .. lambda expression here .. );
+
+    names = new ArrayList<>(names);
+    names.add("Alice");
+    names.add("Derek");
+    names.add("Malcolm");
+    System.out.println(names);
+    System.out.println(names);
+//    names.sort(
+//        (String s1, String s2) -> {
+//          return s1.compareTo(s2);
+//        }
+//    );
+    names.sort(
+//        (s1, s2) -> s1.compareTo(s2)
+        String::compareTo // method reference
+    );
+    names.sort(
+        (s1, s2) -> s2.compareTo(s1)
+    );
+    System.out.println(names);
+
+    names.sort(
+        // Might over/underflow!!!
+//        (s1, s2) -> s1.length() - s2.length()
+
+        (s1, s2) -> Integer.compare(s1.length(), s2.length())
+    );
+    System.out.println(names);
   }
 }
