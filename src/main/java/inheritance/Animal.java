@@ -1,6 +1,6 @@
 package inheritance;
 
-public class Animal {
+public abstract class Animal {
   private int weight;
 //  private int numberOfLegs;
   protected int numberOfLegs;
@@ -17,13 +17,16 @@ public class Animal {
     System.out.println("Initializing Animal...");
   }
 
-  public void feed(/*Animal this,*/ String food) {
-    System.out.println("Yummy (in animal speak) I love " + food);
-  }
+//  public void feed(/*Animal this,*/ String food) {
+//    System.out.println("Yummy (in animal speak) I love " + food);
+//  }
+  public abstract void feed(/*Animal this,*/ String food);
 
-  public String favoriteFood() {
-    return "Air";
-  }
+//  public String favoriteFood() {
+//    return "Air";
+//  }
+
+  public abstract String favoriteFood();
 
   public int getWeight() {
     return weight;

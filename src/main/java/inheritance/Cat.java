@@ -18,7 +18,8 @@ public class Cat extends Animal {
   @Override
   public void feed(/*Cat this, */String food) {
     if (foods.contains(food)) {
-      super.feed(food);
+      System.out.println("(in animal speak, yay " + food);
+//      super.feed(food); // not possible if parent method is abstract
 //      int requiredFood = this.weight; // not allowed for private elements in parent
       int requiredFood = /*this.*/getWeight();
       // protected is visible, provided reference type is sub-type

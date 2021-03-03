@@ -15,7 +15,10 @@ public class ZooKeeper {
   }
 
   public static void main(String[] args) {
-    Animal a = new Animal(5, 4);
+    // Cannot instantiate an abstract class!
+//    Animal a = new Animal(5, 4);
+
+    Animal a = new Dog(15, "Labrador");
     a.feed("Worms");
     Animal c = new Cat(5, "Tabby");
     // actual instance behavior chosen from type of OBJECT referred to.
