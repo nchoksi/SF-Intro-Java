@@ -56,7 +56,9 @@ public class Date {
   }
 
 //  public String asText(@NotNull Date this) {
-  public String asText() {
+//  public String asText() {
+  @Override
+  public String toString() {
     return "Date: " + this.day + "/" + this.month + "/" + this.year;
   }
 

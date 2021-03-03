@@ -34,7 +34,8 @@ public class TestMyDate {
   @Test
   public void asTextCreatesExpected() {
     Date d = new Date(29, 2, 2000);
-    String asText = d.asText();
+//    String asText = d.asText();
+    String asText = d.toString();
     assertEquals("Feb 29, 2000 should look like Date: 2/29/2000", "Date: 29/2/2000", asText);
   }
 
@@ -50,7 +51,8 @@ public class TestMyDate {
     Date d = new Date(5, 1, 2000);
     d.tomorrow();
     Date expected = new Date(6, 1, 2000);
-    System.out.println("d is " + d.asText());
+//    System.out.println("d is " + d.asText());
+    System.out.println("d is " + d.toString());
     assertEquals("Date should be 6, 1, 2000", expected, d);
   }
 }
