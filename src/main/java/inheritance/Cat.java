@@ -19,6 +19,10 @@ public class Cat extends Animal {
   public void feed(/*Cat this, */String food) {
     if (foods.contains(food)) {
       super.feed(food);
+//      int requiredFood = this.weight; // not allowed for private elements in parent
+      int requiredFood = /*this.*/getWeight();
+      // protected is visible, provided reference type is sub-type
+      int legCount = this.numberOfLegs;
       System.out.println("purr purr purr, eat, wander off");
     } else {
       System.out.println("Claw the bad human servant!");

@@ -1,8 +1,9 @@
 package inheritance;
 
 public class Animal {
-  int weight;
-  int numberOfLegs;
+  private int weight;
+//  private int numberOfLegs;
+  protected int numberOfLegs;
 // IF ZERO explicit constructors, compiler generates "default"
 // public Animal() {}
 
@@ -22,5 +23,9 @@ public class Animal {
 
   public String favoriteFood() {
     return "Air";
+  }
+
+  public int getWeight() {
+    return weight;
   }
 }
